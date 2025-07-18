@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maelis: Fase 2 - Floresta Corrompida</title> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fase2.css" />
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="1000"></canvas>
+        <div id="pontuacao">Pontos: 0</div>
+        
+        <div id="aviso-escape" class="aviso-texto" style="display:none;">AVISO! Um inimigo escapou. Não deixe que aconteça de novo!</div>
+
+        <div id="caixa-dialogo" style="display:none;">
+            <p id="texto-dialogo"></p>
+            <button id="btn-continuar">Continuar</button>
+        </div>
+
+        <div id="fim-de-fase" style="display:none;">
+            <h1>Fase Concluída!</h1>
+            <button id="btnVoltarMenuFase">Voltar ao Menu</button>
+        </div>
+
+        <div id="tela-falha" style="display:none;">
+            <h1>Inimigos Escaparam!</h1>
+            <p>Você deve derrotar todos para purificar a área.</p>
+            <button id="btn-tentar-novamente">Tentar Novamente</button>
+        </div>
+
+        <div id="magia-bar-container">
+            <div id="magia-bar-fill"></div>
+        </div>
+        <div id="magia-brilho"></div>
+
+    </div>
+    <script src="js/fase2.js"></script>
+</body>
+</html>

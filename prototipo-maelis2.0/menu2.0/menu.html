@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Maelis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+    <audio id="musica-menu" src="../Jogo/assets/musica-menu.mp3" loop></audio>
+    <audio id="som-click" src="../Jogo/assets/som-click.mp3"></audio>
+    <audio id="som-hover" src="../Jogo/assets/som-hover.mp3"></audio>
+
+    <div id="tela-inicial">
+        <h1>Pressione qualquer tecla para iniciar...</h1>
+        <div id="tela-cheia">
+            <h1>Para melhor experiência, aperte F11 para maximizar a tela</h1>
+        </div>
+    </div>
+
+    <div id="menu-principal">
+        <a href="#" id="botao-config">
+            <i class="fa-solid fa-gear"></i>
+        </a>
+
+        <h1 class="titulo-principal" data-text="MAELIS">MAELIS</h1>
+        <h2 class="subtitulo">GUARDIÃ DA NÉVOA</h2>
+
+        <div class="botoes-menu">
+            <button id="botao-iniciar">INICIAR</button>
+            <button id="botao-fase2">FASE 2</button>
+            <button id="botao-modo-infinito">MODO INFINITO</button> 
+            <button id="botao-creditos">CRÉDITOS</button>
+        </div>
+
+        <div class="versao">
+            VERSÃO: 1.0
+        </div>
+    </div>
+
+    <div id="tela-cutscene">
+        <h1>Cutscene...</h1>
+        <p>(Pressione qualquer tecla para ir ao menu)</p>
+    </div>
+
+    <div id="tela-creditos">
+        <div class="creditos-animacao-container">
+            
+            <div class="creditos-bloco">
+                <div class="equipe">
+                    <h2 data-text="Equipe de Desenvolvimento">Equipe de Desenvolvimento</h2>
+                    <p>Fernando Gadelha</p><p>Felipe Guedes</p><p>João Miguel</p><p>Juan Gabriel</p><p>Victor Gabriel</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Roteiro">Equipe de Roteiro</h2>
+                    <p>Adria Thaís</p><p>Ana Clara</p><p>Dhande Gabriel</p><p>Isabella Lima</p><p>Juandarlei</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Design">Equipe de Design</h2>
+                    <p>Heloíse Gabrielle</p><p>Sara Nunes</p><p>Sara Vitória</p><p>Suzana Santos</p><p>Taíssa Farias</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Audiovisual">Equipe de Audiovisual</h2>
+                    <p>Emelly Silva</p><p>Lyndon Queiros</p><p>Marcelo Silva</p><p>Marcos Ruan</p><p>Taiane Silva</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Tradução">Equipe de Tradução</h2>
+                    <p>Angie Lisset</p><p>Camilly Castro</p><p>Ícaro Menezes</p><p>João Elias</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Monetização">Equipe de Monetização</h2>
+                    <p>David Gabriel</p><p>Gabrielly Bastos</p><p>Jhenifer Souza</p><p>Júlia Padron</p><p>Luyse Gadelha</p><p>Ramizeli Cristina</p>
+                </div>
+            </div>
+    
+            <div class="creditos-bloco" aria-hidden="true">
+                <div class="equipe">
+                    <h2 data-text="Equipe de Desenvolvimento">Equipe de Desenvolvimento</h2>
+                    <p>Fernando Gadelha</p><p>Felipe Guedes</p><p>João Miguel</p><p>Juan Gabriel</p><p>Victor Gabriel</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Roteiro">Equipe de Roteiro</h2>
+                    <p>Adria Thaís</p><p>Ana Clara</p><p>Dhande Gabriel</p><p>Isabella Lima</p><p>Juandarlei</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Design">Equipe de Design</h2>
+                    <p>Heloíse Gabrielle</p><p>Sara Nunes</p><p>Sara Vitória</p><p>Suzana Santos</p><p>Taíssa Farias</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Audiovisual">Equipe de Audiovisual</h2>
+                    <p>Emelly Silva</p><p>Lyndon Queiros</p><p>Marcelo Silva</p><p>Marcos Ruan</p><p>Taiane Silva</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Tradução">Equipe de Tradução</h2>
+                    <p>Angie Lisset</p><p>Camilly Castro</p><p>Ícaro Menezes</p><p>João Elias</p>
+                </div>
+                <div class="equipe">
+                    <h2 data-text="Equipe de Monetização">Equipe de Monetização</h2>
+                    <p>David Gabriel</p><p>Gabrielly Bastos</p><p>Jhenifer Souza</p><p>Júlia Padron</p><p>Luyse Gadelha</p><p>Ramizeli Cristina</p>
+                </div>
+            </div>
+    
+        </div>
+        <p class="instrucao-voltar">(Pressione qualquer tecla para voltar ao menu)</p>
+    </div>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

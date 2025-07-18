@@ -1,0 +1,98 @@
+/* Usando uma fonte com tema de jogo retrô */
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;    /* Centraliza verticalmente */
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Estilo para o contêiner do jogo TORNADO RESPONSIVO E TELA CHEIA */
+#game-container {
+  position: relative;
+  
+  /* FAZ O CONTAINER OCUPAR TODA A ALTURA DA TELA */
+  height: 100vh; 
+  
+  /* A LARGURA SERÁ CALCULADA AUTOMATICAMENTE PARA MANTER A PROPORÇÃO */
+  aspect-ratio: 800 / 1000;
+
+  /* Uma segurança para não transbordar em telas muito largas */
+  max-width: 100vw; 
+}
+
+canvas {
+  background: #000;
+  display: block;
+  border: 3px solid rgba(0, 0, 0, 0.489);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgb(65, 5, 70);
+  width: 100%;
+  height: 100%;
+}
+
+/* PONTUAÇÃO RESPONSIVA */
+#pontuacao {
+  position: absolute;
+  /* Posicionado com porcentagens para se adaptar */
+  top: 2%; 
+  left: 3%;
+  color: #fff;
+  /* O 'clamp' define um tamanho mínimo, um preferido (relativo à tela) e um máximo */
+  font-size: clamp(12px, 2.5vw, 20px);
+  text-shadow: 2px 2px 4px #000;
+  user-select: none;
+  z-index: 10;
+}
+
+/* BOTÕES RESPONSIVOS */
+#btnReiniciar, #btnVoltarMenu {
+  position: absolute; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Padding responsivo */
+  padding: clamp(8px, 2vw, 15px) clamp(15px, 4vw, 30px);
+  
+  font-family: 'Press Start 2P', cursive;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  z-index: 20;
+  text-shadow: 2px 2px 4px #000;
+  transition: all 0.2s ease;
+  width: auto; /* Garante que o botão se ajuste ao texto */
+  white-space: nowrap; /* Impede que o texto do botão quebre linha */
+}
+
+#btnReiniciar {
+  top: 52%;
+  font-size: clamp(14px, 3vw, 22px);
+  background-color: #ff3c3c;
+  box-shadow: 0 0 10px #ff3c3c, inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+#btnReiniciar:hover {
+  background-color: #ff6666;
+  box-shadow: 0 0 20px #ff3c3c, inset 0 0 8px rgba(255, 255, 255, 0.6);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+#btnVoltarMenu {
+  top: 64%;
+  font-size: clamp(12px, 2.5vw, 18px);
+  background-color: #4CAF50;
+  box-shadow: 0 0 10px #4CAF50, inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+#btnVoltarMenu:hover {
+  background-color: #66bb6a;
+  box-shadow: 0 0 20px #4CAF50, inset 0 0 8px rgba(255, 255, 255, 0.6);
+  transform: translate(-50%, -50%) scale(1.05);
+}

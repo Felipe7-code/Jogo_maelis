@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0d1a2f 0%, #04080f 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  background-color: #0c1421;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  max-height: 1000px;
+  object-fit: contain;
+  border: 3px solid rgba(107, 185, 240, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(107, 185, 240, 0.6);
+}
+
+#pontuacao {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  color: #fff;
+  font-size: clamp(14px, 3vw, 20px);
+  text-shadow: 2px 2px 4px #000;
+  z-index: 10;
+}
+
+.tutorial-texto {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 500px;
+  color: #fff;
+  font-size: clamp(16px, 4vw, 24px);
+  text-shadow: 3px 3px 6px #000;
+  z-index: 10;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+#caixa-dialogo, #fim-de-fase {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid #6b90a3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    z-index: 30;
+    color: #fff;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+#caixa-dialogo p, #fim-de-fase h1 {
+    margin-bottom: 20px;
+    font-size: clamp(16px, 3.5vw, 22px);
+    line-height: 1.6;
+}
+
+#caixa-dialogo button, #fim-de-fase button {
+    padding: 12px 25px;
+    font-size: clamp(14px, 3vw, 18px);
+    font-family: 'Press Start 2P', cursive;
+    background-color: #4CAF50;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#caixa-dialogo button:hover, #fim-de-fase button:hover {
+    background-color: #66bb6a;
+}
+
+/* NOVO: Estilo para o texto de aviso de escape */
+.aviso-texto {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffcc00; /* Cor de alerta amarela */
+  font-size: clamp(16px, 3.5vw, 22px);
+  text-shadow: 2px 2px 4px #000;
+  z-index: 15;
+  text-align: center;
+  padding: 10px;
+  width: 80%;
+  max-width: 500px;
+  background-color: rgba(255, 100, 0, 0.3);
+  border: 2px solid #ffcc00;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+/* Estilo para a tela de falha */
+#tela-falha {
+    display: none;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(40, 0, 0, 0.85);
+    border: 2px solid #ff3c3c;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    z-index: 30;
+    color: #fff;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+#tela-falha h1 {
+    color: #ff3c3c;
+    font-size: clamp(18px, 4vw, 24px);
+    margin-bottom: 15px;
+}
+#tela-falha p {
+    font-size: clamp(14px, 3vw, 18px);
+    margin-bottom: 25px;
+}
+#tela-falha button {
+    padding: 12px 25px;
+    font-size: clamp(14px, 3vw, 18px);
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ff3c3c;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#tela-falha button:hover {
+    background-color: #ff6666;
+    transform: scale(1.05);
+}

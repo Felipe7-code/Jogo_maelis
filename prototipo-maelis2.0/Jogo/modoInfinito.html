@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Protótipo Modo Infinito - Maelis (Versão Melhorada)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <audio id="som-click" src="assets/som-click.mp3"></audio>
+    <audio id="som-hover" src="assets/som-hover.mp3"></audio>
+    <audio id="som-game-over" src="assets/som-game-over.mp3"></audio>
+    <audio id="som-disparo" src="assets/som-disparo.mp3"></audio>
+    <audio id="musica-acao" src="assets/musica-acao.mp3" loop></audio>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="1000"></canvas>
+        <div id="pontuacao">Pontos: 0</div>
+        <button id="btnReiniciar" style="display:none;">Reiniciar</button>
+        <button id="btnVoltarMenu" style="display:none;">Voltar ao Menu</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
